@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda - Salchuk Jafarlı</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            min-height: 100vh;
+        }
+        .content-box {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .about-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        .hobi-card {
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .hobi-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-link {
+            font-size: 2rem;
+            margin: 0 15px;
+            transition: 0.3s;
+            color: #333;
+        }
+        .github-link:hover { color: #24292e; transform: scale(1.2); }
+        .instagram-link:hover { color: #e4405f; transform: scale(1.2); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Salchuk Jafarlı</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="hakkimda.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="takim.html">Takım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="index.html" class="btn btn-light text-dark">Giriş Yap</a>
+                <a href="kayit.html" class="btn btn-light text-dark">Kayıt Ol</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="row justify-content-center">
+            <article class="col-md-10 content-box shadow-lg text-center">
+                <header>
+                    <h1 class="display-4 fw-bold mb-4">Hakkımda</h1>
+                </header>
+
+                <div class="row mb-5">
+                    <div class="col-md-6 about-text text-start">
+                        <p>
+                            Ben <strong>Salchuk Jafarlı</strong>, 1 Şubat 2008 tarihinde Azerbaycan’ın Bakü şehrinde doğdum. Doğma büyüme Azerbaycanlıyım. Küçük yaşlarda derslerim çok iyi gitmese de, iki ablamın üniversite kazanması bana büyük bir motivasyon oldu. Bu motivasyonla üniversite sınavına girdim ve TR-YÖS’te iyi bir puan alarak Sakarya Üniversitesi Bilgisayar Mühendisliği bölümüne yerleştim.
+                        </p>
+                        <p>
+                            Mühendislik bölümünü seçme sebebim, Kocaeli Üniversitesi 4. sınıf Bilişim Sistemleri Mühendisliği okuyan ablamın yaptığı projeler ve stajların beni etkilemesiydi. Ayrıca diğer ablam da Malmö University’de yüksek lisans yapıyor ve Computational Materials Science (Hesaplamalı Malzeme Bilimi) alanında eğitim alıyor. Onların çalışmaları ve başarıları beni motive etti ve mühendislik bölümünü seçmemde önemli bir rol oynadı.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="aile.jpeg" alt="Fotoğrafım" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+
+                
+                <section class="text-start px-3 mb-5">
+                    <h3 class="fw-bold mb-4 text-center" style="color: #4a4a4a;">Hobiler ve Etkinlikler</h3>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 bg-light hobi-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3" style="color: #0d6efd;"><i class="fa-solid fa-laptop-code"></i> Yazılım</h5>
+                                    <p class="card-text text-muted">C#, .NET ve web teknolojileriyle aktif olarak uğraşıyor, kendimi sürekli geliştiriyorum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 bg-light hobi-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3" style="color: #198754;"><i class="fa-solid fa-gamepad"></i> Oyun</h5>
+                                    <p class="card-text text-muted">"Mobile Legends" oyuncusuyum. Strateji ve takım koordinasyonu kurmayı seviyorum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 bg-light hobi-card">
+                                <div class="card-title mb-3" style="color: #dc3545;"><i class="fa-solid fa-music"></i> Müzik</h5>
+                                    <p class="card-text text-muted">Pop müzik ve Sabrina Carpenter gibi sanatçıların güncel parçalarını takip ediyorum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-5">
+
+                
+                <section class="row align-items-center">
+                    
+                    <div class="col-md-6 mb-4">
+                        <h4 class="fw-bold mb-4">Bana Ulaşın</h4>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://github.com/SalchukJafarli" target="_blank" class="social-link github-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/jafarlisalchuk?igsh=MTN6YTVhNjN3Zzhobw%3D%3D&utm_source=qr" target="_blank" class="social-link instagram-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-6">
+                        <h4 class="fw-bold mb-4">Dinlediklerim</h4>
+                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:450px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/tr/playlist/dinlediklerin-2026/pl.rp-gQDDIzLXGE92"></iframe>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

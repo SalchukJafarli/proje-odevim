@@ -44,7 +44,7 @@
                     echo '<div class="alert alert-danger">Yanlış kullanıcı adı veya şifre!</div>';
                 }
                 ?>
-                <form id="loginForm">
+                <form action="login.php" method="POST">
                     <div class="mb-3">
                         <label for="username" class="form-label">Kullanıcı Adı (Öğrenci Maili)</label>
                         <input type="text" class="form-control" id="username" name="username" required>
@@ -59,20 +59,40 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const correctUsername = 'B251210565';
-            const correctPassword = '12345';
-            if (username === correctUsername && password === correctPassword) {
-                window.location.href = 'hakkimda.html';
-            } else {
-                alert('Yanlış kullanıcı adı veya şifre!');
-            }
-        });
-    </script>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $correct_username = 'B251210565';
+        $correct_password = '12345';
+
+        if ($username == $correct_username && $password == $correct_password) {
+            
+            echo '<!DOCTYPE html>
+            <html lang="tr">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Hoşgeldiniz</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            </head>
+            <body class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+                <div class="text-center">
+                    <h1 class="display-4">Hoşgeldiniz ' . $username . '</h1>
+                    <p class="lead">Başarıyla giriş yaptınız!</p>
+                    <a href="index.html" class="btn btn-primary">Ana Sayfaya Git</a>
+                </div>
+            </body>
+            </html>';
+            exit();
+        } else {
+            
+            header('Location: login.php?error=1');
+            exit();
+        }
+    }
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
