@@ -1,52 +1,188 @@
 <!DOCTYPE html>
+
 <html lang="tr">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Şehirim - Salchuk Jafarlı
+
     </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+
     <style>
+
         .cv-section-title {
+
             border-bottom: 2px solid #7d3edb;
+
             padding-bottom: 5px;
+
             margin-bottom: 20px;
+
             color: #7d3edb;
+
             font-weight: bold;
+
         }
+
         .skill-badge {
+
             background-color: #f0e6ff;
+
             color: #7d3edb;
+
             border: 1px solid #7d3edb;
+
             margin: 2px;
+
         }
+
     </style>
+
 </head>
+
 <body>
 
+
+
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
         <div class="container">
+
             <a class="navbar-brand" href="index.html">Hoş Geldiniz
+
             </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                
+
+               
+
                 <ul class="navbar-nav mx-auto">
+
                     <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+
                     <li class="nav-item"><a class="nav-link active" href="sehir.html">Şehrim</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="takim.html">Takım</a></li>
+
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+
                 </ul>
+
             </div>
 
             <div>
+
                 <a href="index.html" class="btn btn-light text-dark">Giriş Yap</a>
-                <a href="kayit.html" class="btn btn-light text-dark">Kayıt Ol</a>
+
             </div>
+
         </div>
+
     </nav>
+
+    <main class="container">
+        <div class="row justify-content-center">
+            <article class="col-md-10 content-box">
+                <h1 class="display-4 fw-bold text-center mb-5" style="color: #7d3edb;">Bakü: Rüzgarlar Şehri</h1>
+
+                
+                <div id="sehirSlider" class="carousel slide shadow mb-5" data-bs-ride="carousel">
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="baku1.jpg" class="d-block w-100" alt="Alev Kuleleri">
+                            <div class="carousel-caption">
+                                <h5>Alev Kuleleri</h5>
+                                <p>Bakü'nün modern simgesi ve gece ışıklandırmasıyla ünlü kuleleri.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="baku2.jpg" class="d-block w-100" alt="İçeri Şehir">
+                            <div class="carousel-caption">
+                                <h5>İçeri Şehir (Eski Şehir)</h5>
+                                <p>UNESCO Dünya Mirası listesinde yer alan tarihi kale içi.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="baku3.jpg" class="d-block w-100" alt="Haydar Aliyev Merkezi">
+                            <div class="carousel-caption">
+                                <h5>Haydar Aliyev Merkezi</h5>
+                                <p>Zaha Hadid tarafından tasarlanan muazzam mimari yapı.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="baku4.jpg" class="d-block w-100" alt="Bakü Bulvarı">
+                            <div class="carousel-caption">
+                                <h5>Bakü Bulvarı</h5>
+                                <p>Hazar Denizi kıyısında yer alan, şehrin en büyük yürüyüş ve eğlence alanı.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="info-card">
+                            <h4 class="fw-bold"><i class="fa-solid fa-users"></i> Nüfus Bilgisi</h4>
+                            <p class="fs-5 mb-0">Yaklaşık 2.3 Milyon (2026 tahmini)</p>
+                        </div>
+                        <div class="info-card">
+                            <h4 class="fw-bold"><i class="fa-solid fa-map-location-dot"></i> Konum</h4>
+                            <p class="mb-0">Hazar Denizi'nin batı kıyısında, Abşeron Yarımadası'nda yer alır.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h4 class="fw-bold mb-4" style="color: #7d3edb;">Gezilecek Yerler</h4>
+                        <div class="place-list-item">
+                            <strong>Kız Kalesi:</strong> Bakü'nün en eski tarihi yapılarından biridir ve şehrin sembolüdür.
+                        </div>
+                        <div class="place-list-item">
+                            <strong>Şirvanşahlar Sarayı:</strong> 15. yüzyıldan kalma görkemli bir saray kompleksi.
+                        </div>
+                        <div class="place-list-item">
+                            <strong>Yanardağ:</strong> Doğal gaz sızıntısı nedeniyle binlerce yıldır sönmeyen ateş.
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
