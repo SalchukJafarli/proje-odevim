@@ -3,37 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Takim - Salchuk Jafarlı
-    </title>
+    <title>Takımımız - Qarabağ FK - Salchuk Jafarlı</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
+    
     <style>
-        .cv-section-title {
+        
+        .section-title {
             border-bottom: 2px solid #7d3edb;
             padding-bottom: 5px;
             margin-bottom: 20px;
             color: #7d3edb;
             font-weight: bold;
         }
-        .skill-badge {
+        .team-card {
+            border-left: 5px solid #000;
+            background-color: #f8f9fa;
+            transition: transform 0.3s;
+        }
+        .team-card:hover {
+            transform: scale(1.02);
+        }
+        .achievement-badge {
             background-color: #f0e6ff;
             color: #7d3edb;
             border: 1px solid #7d3edb;
-            margin: 2px;
+            font-size: 0.9rem;
+        }
+        .qarabag-colors {
+            background: linear-gradient(90deg, #000000 50%, #ffffff 50%);
+            height: 5px;
+            border: none;
+        }
+        
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Hoş Geldiniz
-            </a>
+            <a class="navbar-brand" href="index.html">Salchuk Jafarlı</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
@@ -43,9 +64,73 @@
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                 </ul>
             </div>
-
             <div>
                 <a href="index.html" class="btn btn-light text-dark">Giriş Yap</a>
             </div>
         </div>
     </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            
+            <article class="col-md-9 content-box shadow-lg p-5 bg-white rounded">
+                
+                <img src="qarabag.jpeg" alt="Qarabağ FK Takımı" class="hero-img shadow">
+
+                <header class="text-center mb-5">
+                    <h1 class="display-5 fw-bold">Ülkemizin Gururu</h1>
+                    <hr class="qarabag-colors mx-auto w-25">
+                    <h2 class="text-muted">Qarabağ Futbol Klubu</h2>
+                </header>
+
+                <section class="mb-5">
+                    <h3 class="section-title">📜 Tarihçe ve "İmarət" Ruhu</h3>
+                    <div class="ms-3">
+                        <p>
+                            1951 yılında Ağdam'da kurulan Qarabağ FK, Azerbaycan futbolunun en başarılı ve ilham verici kulüplerinden biridir. Karabağ savaşı nedeniyle Ağdam'daki efsanevi <strong>İmarət Stadyumu'nu</strong> terk etmek zorunda kalsa da, küllerinden doğarak maçlarını Bakü'de oynamaya başlamıştır. "Məcburi Köçkün" (Zorunlu Göçmen) statüsünden çıkıp Avrupa'nın zirvesine uzanan bu hikaye, Qarabağ'ı sadece bir futbol takımı değil, aynı zamanda ulusal bir kimlik ve gurur sembolü haline getirmiştir. Taraftarlar arasında <strong>"Köhlənlər"</strong> lakabıyla anılır.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">🏆 Başarılar ve Avrupa Fatihi</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 team-card p-3 border-0 shadow-sm">
+                                <h5>Avrupa Arenası</h5>
+                                <p class="small text-muted">Azerbaycan futbol tarihinde UEFA Şampiyonlar Ligi gruplarına kalmayı başaran ilk kulüptür. Avrupa Ligi'nde sayısız kez boy göstererek Avrupa devlerine karşı unutulmaz zaferler kazanmıştır.</p>
+                                <div><span class="badge achievement-badge">Şampiyonlar Ligi Temsilcisi</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 team-card p-3 border-0 shadow-sm">
+                                <h5>Yerel Dominasyon</h5>
+                                <p class="small text-muted">Azerbaycan Premyer Liqası'nda kurduğu büyük ambargo ile kırılması zor rekorlara imza atmıştır. Üst üste kazanılan lig şampiyonlukları ile ülkenin tartışmasız en büyük futbol gücüdür.</p>
+                                <div><span class="badge achievement-badge">Çoklu Lig Şampiyonu</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="section-title">🧠 Qurban Qurbanov Dönemi</h3>
+                    <div class="ms-3">
+                        <p>
+                            Takımın bu inanılmaz yükselişinin arkasındaki baş mimar, efsanevi teknik direktör <strong>Qurban Qurbanov</strong>'dur. 2008 yılından bu yana takımın başında olan Qurbanov, Qarabağ'a sadece kupalar kazandırmakla kalmamış; disiplinli, modern ve göze hoş gelen futboluyla tüm Avrupa'nın saygısını kazanmıştır.
+                        </p>
+                    </div>
+                </section>
+
+                <footer class="text-center mt-5">
+                    <blockquote class="blockquote">
+                        <p class="fst-italic text-muted">"Qarabağ sadəcə bir futbol klubu deyil, bir xalqın kimliyidir."</p>
+                    </blockquote>
+                </footer>
+
+            </article>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
