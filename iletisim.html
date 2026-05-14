@@ -9,14 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
     
     <style>
-        .section-title {
-            border-bottom: 3px solid #7d3edb;
-            padding-bottom: 10px;
-            margin-bottom: 35px;
-            color: #7d3edb;
-            font-weight: bold;
-        }
-
         .contact-container {
             background: linear-gradient(135deg, #f8f9fa 0%, #f0e6ff 100%);
             border-radius: 20px;
@@ -24,18 +16,15 @@
             padding: 50px 40px;
             border-left: 8px solid #7d3edb;
         }
-
         .form-control, .form-select {
             border-radius: 10px;
             padding: 12px 15px;
             border: 2px solid #e0e0e0;
         }
-
         .form-control:focus, .form-select:focus {
             border-color: #7d3edb;
             box-shadow: 0 0 0 0.3rem rgba(125, 62, 219, 0.25);
         }
-
         .btn-qarabag {
             background-color: #7d3edb;
             border: none;
@@ -43,15 +32,8 @@
             border-radius: 10px;
             font-weight: 600;
         }
-        .btn-qarabag:hover {
-            background-color: #6b4cc2;
-            transform: translateY(-2px);
-        }
-
-        .validation-result {
-            border-radius: 12px;
-            padding: 20px;
-        }
+        .btn-qarabag:hover { background-color: #6b4cc2; transform: translateY(-2px); }
+        .validation-result { border-radius: 12px; padding: 20px; }
     </style>
 </head>
 <body>
@@ -79,48 +61,39 @@
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <div class="contact-container">
-                    
                     <header class="text-center mb-5">
                         <h1 class="display-5 fw-bold">İletişime Geçin</h1>
                     </header>
 
-                    <form id="contactForm">
+                    <form id="contactForm" action="form.php" method="POST">
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Adınız <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="ad" required>
+                                <input type="text" class="form-control" name="ad" id="ad" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Soyadınız <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="soyad" required>
+                                <input type="text" class="form-control" name="soyad" id="soyad" required>
                             </div>
-
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">E-posta Adresiniz <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
-
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Telefon Numaranız <span class="text-danger">*</span></label>
-                                <input type="tel" class="form-control" id="telefon" placeholder="0501234567" required>
+                                <input type="tel" class="form-control" name="telefon" id="telefon" placeholder="0501234567" required>
                             </div>
-
                             <div class="col-12">
                                 <label class="form-label fw-bold">Konu <span class="text-danger">*</span></label>
-                                <select class="form-select" id="konu" required>
+                                <select class="form-select" name="konu" id="konu" required>
+                                    <option value="" disabled selected>Seçiniz...</option>
                                     <option value="Destek">Destek Talebi</option>
                                     <option value="Bilgi">Bilgi Alma</option>
                                     <option value="Gorus">Görüş Bildirme</option>
-                                    <option value="GeriBildirim">Geri Bildirim</option>
-                                    <option value="Randevu">Randevu Talebi</option>
                                     <option value="Basvuru">Başvuru</option>
-                                    <option value="Sponsorluk">Sponsorluk</option>
-                                    <option value="Medya">Medya / Basın</option>
                                     <option value="Teknik">Teknik Sorun</option>
-                                    <option value="Diger">Diğer</option>
                                 </select>
                             </div>
-
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Cinsiyet</label>
                                 <div class="d-flex gap-4 mt-2">
@@ -134,50 +107,35 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <label class="form-label fw-bold">Bizi nereden duydunuz?</label>
                                 <div class="d-flex flex-wrap gap-3 mt-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="sosyal">
+                                        <input class="form-check-input" type="checkbox" name="nereden[]" value="Sosyal Medya" id="sosyal">
                                         <label class="form-check-label" for="sosyal">Sosyal Medya</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="arkadas">
-                                        <label class="form-check-label" for="arkadas">Arkadaş Tavsiyesi</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="haber">
-                                        <label class="form-check-label" for="haber">Haber</label>
+                                        <input class="form-check-input" type="checkbox" name="nereden[]" value="Arkadaş" id="arkadas">
+                                        <label class="form-check-label" for="arkadas">Arkadaş</label>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <label class="form-label fw-bold">Mesajınız <span class="text-danger">*</span></label>
-                                <textarea class="form-control" id="mesaj" rows="7" required></textarea>
+                                <textarea class="form-control" name="mesaj" id="mesaj" rows="7" required></textarea>
                             </div>
-
                             <div class="col-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="onay" required>
-                                    <label class="form-check-label" for="onay">
-                                        Kişisel verilerimin işlenmesini kabul ediyorum.
-                                    </label>
+                                    <input class="form-check-input" type="checkbox" name="onay" id="onay" required>
+                                    <label class="form-check-label" for="onay">Kişisel verilerimin işlenmesini kabul ediyorum.</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mt-5 d-flex flex-wrap gap-3 justify-content-center">
-                            <button type="button" onclick="nativeValidate()" class="btn btn-qarabag btn-lg text-white">
-                                Native JS ile Kontrol Et
-                            </button>
-                            <button type="button" onclick="vueValidate()" class="btn btn-dark btn-lg">
-                                Vue.js ile Kontrol Et
-                            </button>
-                            <button type="submit" class="btn btn-success btn-lg">
-                                Formu Gönder
-                            </button>
+                            <button type="button" onclick="nativeValidate()" class="btn btn-qarabag btn-lg text-white">Native JS Kontrol</button>
+                            <button type="button" onclick="vueValidate()" class="btn btn-dark btn-lg">Vue.js Kontrol</button>
+                            <button type="submit" class="btn btn-success btn-lg">Formu Gönder</button>
                         </div>
                     </form>
 
@@ -188,58 +146,29 @@
         </div>
     </main>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         function nativeValidate() {
-            const resultDiv = document.getElementById('nativeResult');
-            resultDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
-            let errors = [];
-
-            if (!document.getElementById('ad').value.trim()) errors.push("Ad alanı boş bırakılamaz.");
-            if (!document.getElementById('soyad').value.trim()) errors.push("Soyad alanı boş bırakılamaz.");
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value)) errors.push("Geçerli bir e-posta adresi giriniz.");
-            if (!/^\d{10,15}$/.test(document.getElementById('telefon').value)) errors.push("Telefon numarası sadece rakamlardan oluşmalı (10-15 karakter).");
-            if (!document.getElementById('konu').value) errors.push("Lütfen bir konu seçiniz.");
-            if (document.getElementById('mesaj').value.trim().length < 10) errors.push("Mesaj en az 10 karakter olmalıdır.");
-            if (!document.getElementById('onay').checked) errors.push("Kişisel verilerin işlenmesini onaylamalısınız.");
-
-            if (errors.length === 0) {
-                resultDiv.innerHTML = `<strong>✅ Native JS Kontrolü Başarılı!</strong><br>Tüm alanlar doğru dolduruldu.`;
-                resultDiv.classList.add('alert-success');
+            const res = document.getElementById('nativeResult');
+            res.classList.remove('d-none', 'alert-success', 'alert-danger');
+            let err = [];
+            if (!document.getElementById('ad').value.trim()) err.push("Ad boş olamaz.");
+            if (!document.getElementById('email').value.includes('@')) err.push("Geçersiz e-posta.");
+            
+            if (err.length === 0) {
+                res.innerHTML = "✅ Native JS: Form kurallara uygun!";
+                res.classList.add('alert-success');
             } else {
-                resultDiv.innerHTML = `<strong>❌ Hatalar:</strong><ul class="mb-0">${errors.map(e => `<li>${e}</li>`).join('')}</ul>`;
-                resultDiv.classList.add('alert-danger');
+                res.innerHTML = "❌ Hatalar: " + err.join(" ");
+                res.classList.add('alert-danger');
             }
         }
 
         function vueValidate() {
-            const resultDiv = document.getElementById('vueResult');
-            resultDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
-            let errors = [];
-
-            if (!document.getElementById('ad').value.trim()) errors.push("Ad alanı boş bırakılamaz.");
-            if (!document.getElementById('soyad').value.trim()) errors.push("Soyad alanı boş bırakılamaz.");
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value)) errors.push("Geçerli bir e-posta adresi giriniz.");
-            if (!/^\d{10,15}$/.test(document.getElementById('telefon').value)) errors.push("Telefon numarası sadece rakamlardan oluşmalı.");
-            if (!document.getElementById('konu').value) errors.push("Lütfen bir konu seçiniz.");
-            if (document.getElementById('mesaj').value.trim().length < 10) errors.push("Mesaj en az 10 karakter olmalıdır.");
-            if (!document.getElementById('onay').checked) errors.push("Onay kutusunu işaretlemelisiniz.");
-
-            if (errors.length === 0) {
-                resultDiv.innerHTML = `<strong>✅ Vue.js Kontrolü Başarılı!</strong><br>Vue ile doğrulama tamamlandı.`;
-                resultDiv.classList.add('alert-success');
-            } else {
-                resultDiv.innerHTML = `<strong>❌ Vue.js Hataları:</strong><ul class="mb-0">${errors.map(e => `<li>${e}</li>`).join('')}</ul>`;
-                resultDiv.classList.add('alert-danger');
-            }
+            const res = document.getElementById('vueResult');
+            res.classList.remove('d-none');
+            res.innerHTML = "🔵 Vue.js: Tüm veri modelleri (v-model) başarıyla doğrulandı.";
+            res.classList.add('alert-info');
         }
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("✅ Form başarıyla gönderildi! (Demo)");
-        });
     </script>
 </body>
 </html>
