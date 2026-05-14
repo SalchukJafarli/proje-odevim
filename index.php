@@ -1,14 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
+<<<<<<< HEAD
     
+=======
+    // Doğru giriş bilgileri
+>>>>>>> 44114800628506acb82c54592bae6583a10f4261
     $dogruEmail = "b251210565@sakarya.edu.tr"; 
     $dogruSifre = "b251210565"; 
 
     $gelenEmail = isset($_POST['email']) ? trim($_POST['email']) : '';
     $gelenSifre = isset($_POST['password']) ? trim($_POST['password']) : '';
 
+<<<<<<< HEAD
     
+=======
+    // Boş alan veya yanlış bilgi kontrolü
+>>>>>>> 44114800628506acb82c54592bae6583a10f4261
     if (empty($gelenEmail) || empty($gelenSifre) || $gelenEmail !== $dogruEmail || $gelenSifre !== $dogruSifre) {
         header("Location: index.html?error=1");
         exit();
@@ -40,9 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <hr class="my-4">
                 <a href="hakkimda.html" class="btn btn-dark btn-lg px-5 py-3 fw-bold">Beklemeden Devam Et</a>
             </div>
+<<<<<<< HEAD
             <script>
                 localStorage.setItem('loggedIn', 'true');
             </script>
+=======
+>>>>>>> 44114800628506acb82c54592bae6583a10f4261
         </body>
         </html>
         <?php
