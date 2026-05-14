@@ -53,7 +53,7 @@
                     <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
                 </ul>
             </div>
-            <a href="index.html" class="btn btn-light text-dark">Giriş Yap</a>
+            <a href="index.html" class="btn btn-light text-dark login-btn">Giriş Yap</a>
         </div>
     </nav>
 
@@ -169,6 +169,14 @@
             res.innerHTML = "🔵 Vue.js: Tüm veri modelleri (v-model) başarıyla doğrulandı.";
             res.classList.add('alert-info');
         }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginButton = document.querySelector('.login-btn');
+            if (loginButton && localStorage.getItem('loggedIn') === 'true') {
+                loginButton.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>

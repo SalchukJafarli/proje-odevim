@@ -41,7 +41,7 @@
                 </ul>
             </div>
             <div>
-                <a href="index.html" class="btn btn-light text-dark">Giriş Yap</a>
+                <a href="index.html" class="btn btn-light text-dark login-btn">Giriş Yap</a>
             </div>
         </div>
     </nav>
@@ -107,5 +107,11 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const loginButton = document.querySelector('.login-btn');
+        if (loginButton && localStorage.getItem('loggedIn') === 'true') {
+            loginButton.style.display = 'none';
+        }
+    </script>
 </body>
 </html>

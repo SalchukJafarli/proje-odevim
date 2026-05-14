@@ -40,6 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <hr class="my-4">
                 <a href="hakkimda.html" class="btn btn-dark btn-lg px-5 py-3 fw-bold">Beklemeden Devam Et</a>
             </div>
+            <script>
+                localStorage.setItem('loggedIn', 'true');
+            </script>
         </body>
         </html>
         <?php

@@ -76,7 +76,7 @@
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                 </ul>
             </div>
-            <a href="index.html" class="btn btn-light text-dark">Giriş Yap</a>
+            <a href="index.html" class="btn btn-light text-dark login-btn">Giriş Yap</a>
         </div>
     </nav>
 
@@ -149,6 +149,12 @@
                 container.innerHTML += cardHtml;
             });
         });
+    </script>
+    <script>
+        const loginButton = document.querySelector('.login-btn');
+        if (loginButton && localStorage.getItem('loggedIn') === 'true') {
+            loginButton.style.display = 'none';
+        }
     </script>
 </body>
 </html>
