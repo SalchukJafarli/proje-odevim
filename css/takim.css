@@ -1,0 +1,6 @@
+.section-title { border-bottom: 2px solid #7d3edb; padding-bottom: 5px; margin-bottom: 20px; color: #7d3edb; font-weight: bold; }
+.team-card { border-left: 5px solid #000; background-color: #f8f9fa; transition: transform 0.3s; }
+.team-card:hover { transform: scale(1.02); }
+.achievement-badge { background-color: #f0e6ff; color: #7d3edb; border: 1px solid #7d3edb; font-size: 0.9rem; }
+.qarabag-colors { background: linear-gradient(90deg, #000000 50%, #ffffff 50%); height: 5px; border: none; }
+.hero-img { width: 100%; height: auto; border-radius: 12px; margin-bottom: 40px; }

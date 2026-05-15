@@ -1,0 +1,5 @@
+.sehir-section-title { border-bottom: 2px solid #7d3edb; padding-bottom: 5px; margin-bottom: 20px; color: #7d3edb; font-weight: bold; }
+.content-box { background-color: #ffffff; padding: 30px; border-radius: 10px; }
+.carousel-inner { background-color: #1a1a1a; border-radius: 8px; }
+.carousel-inner img { height: 500px; object-fit: contain; width: 100%; }
+.list-group-item:hover { background-color: #f0e6ff; color: #7d3edb; transition: 0.3s; }

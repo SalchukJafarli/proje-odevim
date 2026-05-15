@@ -1,0 +1,13 @@
+.cv-section-title {
+    border-bottom: 2px solid #7d3edb;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #7d3edb;
+    font-weight: bold;
+}
+.skill-badge {
+    background-color: #f0e6ff;
+    color: #7d3edb;
+    border: 1px solid #7d3edb;
+    margin: 2px;
+}
